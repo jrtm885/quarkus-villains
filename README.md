@@ -1,5 +1,5 @@
 # Curl commands
-
+Token github: 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
 Criacao:
 curl -X POST http://localhost:8084/api/villains -H "Content-type:application/json" -d "{\"name\":\"teste\", \"level\":2}" -v
 
