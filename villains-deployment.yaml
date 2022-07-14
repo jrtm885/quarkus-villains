@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: villains-deployment
+  labels:
+    app: villains
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: villains
+  template:
+    metadata:
+      labels:
+        app: villains
+    spec:
+      containers:
+      - name: villains
+        image: jr-martinez/rest-villains:0.1
+        ports:
+        - containerPort: 8084
